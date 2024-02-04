@@ -1,6 +1,7 @@
 # Backend Specific Files and Directories
 backend/venv
 backend/db.sqlite3
+backend/db.sqlite3
 
 # Frontend Specific Files and Directories
 frontend/app/vue.config.js
@@ -9,3 +10,4 @@ frontend/app/.browserslistrc
 frontend/app/jsconfig.json
 frontend/app/package-lock.json
 frontend/app/package.json
+frontend/app/node_modules
