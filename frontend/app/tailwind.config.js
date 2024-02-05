@@ -11,7 +11,11 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
-    extend: {},
+    extend: {
+      colors: {
+        'darkBlue': 'rgb(23 23 23)',
+      },
+    },
   },
   plugins: [],
 }
