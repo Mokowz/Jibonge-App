@@ -12,7 +12,7 @@
     <!-- Button -->
     <div class="flex flex-col space-y-2">
         <button type="submit" class="px-3 py-2 rounded-sm bg-yellow-500/75 hover:bg-yellow-500/90">Sign Up</button>
-        <span>Already have an account? <router-link to="/" class="text-yellow-400">Log In</router-link></span>
+        <span>Already have an account? <router-link to="/login" class="text-yellow-400">Log In</router-link></span>
     </div>
 
     <!-- Sign Up with Google -->

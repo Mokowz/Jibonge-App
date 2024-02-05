@@ -15,7 +15,7 @@
             <!-- Buttons -->
             <div class="flex space-x-8">
                 <router-link to="/signup">Sign Up</router-link>
-                <router-link to="/">Log In</router-link>
+                <router-link to="/login">Log In</router-link>
             </div>
         </div>
         
