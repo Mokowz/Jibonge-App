@@ -18,6 +18,7 @@ module.exports = {
     extend: {
       colors: {
         'darkBlue': 'rgb(23 23 23)',
+        'darkGrey': 'rgb(163 163 163)',
       },
     },
   },
