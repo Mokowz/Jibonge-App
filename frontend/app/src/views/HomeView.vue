@@ -1,5 +1,8 @@
 <template>
-    <h2 class="font-bold text-3xl">Hey There</h2>
+    <!-- Flex Container -->
+    <div class="flex text-white container mx-auto p-10">
+      Hey
+    </div>
 </template>
 
 <script>

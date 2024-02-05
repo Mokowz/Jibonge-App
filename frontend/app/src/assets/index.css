@@ -6,5 +6,6 @@
     scroll-behavior: smooth;
     @apply bg-darkBlue;
     /* @apply font-roboto; */
-    @apply font-noto
+    @apply font-noto;
+    color: white;    
 }

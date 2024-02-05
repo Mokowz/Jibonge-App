@@ -3,7 +3,9 @@
     <!-- Flex container -->
     <div class="flex container justify-between mx-auto p-10">
         <!-- Logo -->
-        <span class="text-3xl font-riot font-bold">Ji<span class="font-riot text-yellow-500">Bonge</span></span>
+        <router-link to="/">
+            <span class="text-3xl font-riot font-bold">Ji<span class="font-riot text-yellow-500">Bonge</span></span>
+        </router-link>
         <!-- Menu -->
         <div class="flex space-x-8">
             <router-link class="" to="/">Blogs</router-link>
@@ -12,7 +14,7 @@
 
             <!-- Buttons -->
             <div class="flex space-x-8">
-                <router-link to="/">Sign Up</router-link>
+                <router-link to="/signup">Sign Up</router-link>
                 <router-link to="/">Log In</router-link>
             </div>
         </div>
