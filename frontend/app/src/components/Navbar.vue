@@ -3,7 +3,7 @@
     <!-- Flex container -->
     <div class="flex container justify-between mx-auto p-10">
         <!-- Logo -->
-        <span class="text-2xl font-bold">Ji<span class="text-yellow-500">Bonge</span></span>
+        <span class="text-3xl font-riot font-bold">Ji<span class="font-riot text-yellow-500">Bonge</span></span>
         <!-- Menu -->
         <div class="flex space-x-8">
             <router-link class="" to="/">Blogs</router-link>

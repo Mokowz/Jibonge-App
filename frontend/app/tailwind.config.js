@@ -11,6 +11,10 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
+    fontFamily: {
+      'noto': ['Noto Sans', 'sans-serif'],
+      'riot': ['Protest Riot', 'sans-serif'],
+    },
     extend: {
       colors: {
         'darkBlue': 'rgb(23 23 23)',
