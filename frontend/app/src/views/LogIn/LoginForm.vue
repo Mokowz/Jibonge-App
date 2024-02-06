@@ -3,8 +3,8 @@
     <form action="" class="w-full mx-auto  flex flex-col space-y-4">
       <!-- Inputs -->
       <div class="flex flex-col items-center   space-y-3">
-          <input type="email" placeholder="Email" class="p-1 w-full mx-auto bg-transparent text-slate-50 border rounded-sm border-slate-50">
-          <input type="password" placeholder="Password" class="p-1 w-full mx-auto bg-transparent text-slate-50 border rounded-sm border-slate-50">
+          <input type="email" placeholder="Email" class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
+          <input type="password" placeholder="Password" class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
       </div>
       
       <!-- Button -->
