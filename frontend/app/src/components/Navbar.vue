@@ -8,7 +8,7 @@
         </router-link>
         <!-- Menu -->
         <div class="flex space-x-8">
-            <router-link class="" to="/">Blogs</router-link>
+            <router-link class="" to="/blogs">Blogs</router-link>
             <router-link class="" to="/about">Tags</router-link>
             <router-link class="" to="/about">Profiles</router-link>
 

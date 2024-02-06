@@ -39,6 +39,12 @@ export default {
                     'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa modi magnam harum fugit saepe eaque iste quisquam reiciendis pariatur consequatur.',
                     'date': '12th April 2023',
                     'tags': ['Python', 'Football']
+                },
+                {
+                    'title': "Second Title of My Blog",
+                    'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa modi magnam harum fugit saepe eaque iste quisquam reiciendis pariatur consequatur.',
+                    'date': '10th June 2023',
+                    'tags': ['Cartoon', 'Fun']
                 }
             ],
         }
