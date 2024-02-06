@@ -12,9 +12,10 @@
                     <h3 class="text-3xl font-bold">{{ blog.title }}</h3>
 
                     <!-- Tags -->
-                    <div v-for="tag in blog.tags" :key="tag" class="flex space-x-2">
-                        <h4 class="text-yellow-300 font-semibold text-xl">{{ tag }}</h4>
-                    </div>
+                    <!-- <div v-for="tag in blog.tags" :key="tag" class="inline">
+                        <h4 class="text-yellow-300 font-semibold inline text-xl">{{ tag }}</h4>
+                    </div> -->
+                    <h4 v-for="tag in blog.tags" :key="tag" class="text-yellow-300 flex font-semibold  text-xl">{{ tag }}</h4>
                 </div>
                 
             </div>
