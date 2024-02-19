@@ -1,10 +1,10 @@
 <template>
   <div>
-    <form action="" class="w-full mx-auto  flex flex-col space-y-4">
+    <form action="" @submit.prevent="login" class="w-full mx-auto  flex flex-col space-y-4">
       <!-- Inputs -->
       <div class="flex flex-col items-center   space-y-3">
-          <input type="email" placeholder="Email" class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
-          <input type="password" placeholder="Password" class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
+          <input type="email" placeholder="Email" v-model="email" required  class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
+          <input type="password" placeholder="Password" v-model="password" required class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
       </div>
       
       <!-- Button -->
@@ -21,8 +21,29 @@
 </template>
 
 <script>
-export default {
+import axios from 'axios';
+import router from '@/router';
 
+export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
+
+  methods: {
+    async login() {
+      const response = await axios.post('http://127.0.0.1:8000/api/v1/accounts/login/', {
+        email: this.email,
+        password:this.password,
+      })
+      if (response.status === 200) {
+        // router.push({name: 'home'})
+        this.$router.push('/home')
+      }
+    }
+  }
 }
 </script>
 
