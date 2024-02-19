@@ -32,6 +32,11 @@ INSTALLED_APPS = [
 
     # Apps
     'accounts',
+
+    # Third parties
+    'rest_framework',
+    'rest_framework.authtoken',
+    'dj_rest_auth',
 ]
 
 MIDDLEWARE = [
