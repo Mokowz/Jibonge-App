@@ -12,7 +12,7 @@ class Blog(models.Model):
     # Add the fields
     title = models.CharField(max_length=100)
     content = models.TextField()
-    tag = models.ManyToManyField(Tag, )
+    tags = models.ManyToManyField(Tag, blank=True)
     date_added = models.DateField(auto_now_add=True)
 
     def __str__(self):

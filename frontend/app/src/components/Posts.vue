@@ -2,7 +2,7 @@
   <div>
     <!-- Blog Cards -->
     <div v-for="blog in blogs" :key="blog.title" class="flex justify-between px-6 py-8 border-b border-slate-500">
-        <span class="text-darkGrey">{{ blog.date }}</span>
+        <span class="text-darkGrey">{{ blog.date_added }}</span>
 
         <!-- Info -->
         <div class="flex flex-col space-y-6">
@@ -31,25 +31,26 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     data() {
         return {
-            blogs: [
-                {
-                    'title': "First Title of My Blog",
-                    'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa modi magnam harum fugit saepe eaque iste quisquam reiciendis pariatur consequatur.',
-                    'date': '12th April 2023',
-                    'tags': ['Python', 'Football']
-                },
-                {
-                    'title': "Second Title of My Blog",
-                    'content': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa modi magnam harum fugit saepe eaque iste quisquam reiciendis pariatur consequatur.',
-                    'date': '10th June 2023',
-                    'tags': ['Cartoon', 'Fun']
-                }
-            ],
+            blogs: [],
         }
     },
+
+    mounted() {
+        this.fetchBlogs()
+    },
+
+    methods: {
+        async fetchBlogs() {
+            // Fetch the blogs
+            const response = await axios.get('http://127.0.0.1:8000/api/v1/blogs/')
+            this.blogs = response.data
+        }
+    }
 }
 </script>
 
