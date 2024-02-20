@@ -6,4 +6,5 @@ urlpatterns = [
     
     # Api
     path('api/v1/', include('accounts.urls')),
+    path('api/v1/', include('blogs.urls')),
 ]

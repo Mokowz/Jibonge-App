@@ -33,16 +33,25 @@ INSTALLED_APPS = [
 
     # Apps
     'accounts',
+    'blogs',
 
     # Third parties
     'rest_framework',
     'rest_framework.authtoken',
     'dj_rest_auth',
     'corsheaders',
+    # 'django.contrib.sites',
+    # 'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
+    # 'dj_rest_auth.registration',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

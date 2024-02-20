@@ -1,3 +1,7 @@
-from django.shortcuts import render
+# from django.shortcuts import render
+# from dj_rest_auth.registration.views import RegisterView
 
-# Create your views here.
+# from .serializer import CusomUserCreateSerializer
+
+# class CustomUserRegistrationView(RegisterView):
+#     serializer_class = CusomUserCreateSerializer
