@@ -10,6 +10,7 @@
       <!-- Button -->
       <div class="flex flex-col space-y-2">
           <button type="submit" class="px-3 py-2 rounded-sm bg-yellow-500/75 hover:bg-yellow-500/90">Log In</button>
+          <button type="submit" @click="logMessage" class="px-3 py-2 rounded-sm bg-yellow-500/75 hover:bg-yellow-500/90">Console</button>
           <span>Don't have an account? <router-link to="/signup" class="text-yellow-400">Sign Up</router-link></span>
       </div>
 
@@ -40,8 +41,13 @@ export default {
       })
       if (response.status === 200) {
         // router.push({name: 'home'})
-        this.$router.push('/home')
+        this.$router.push('/')
       }
+    },
+
+    logMessage() {
+      console.log(`Email: ${this.email}`)
+      console.log(`Password: ${this.password}`)
     }
   }
 }
