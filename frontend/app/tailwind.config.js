@@ -12,7 +12,7 @@ module.exports = {
       xl: '1440px',
     },
     fontFamily: {
-      'noto': ['Noto Sans', 'sans-serif'],
+      'noto': ['Poppins', 'sans-serif'],
       'riot': ['Protest Riot', 'sans-serif'],
     },
     extend: {
