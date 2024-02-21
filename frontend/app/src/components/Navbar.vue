@@ -1,7 +1,7 @@
 <template>
   <nav class="text-white">
     <!-- Flex container -->
-    <div class="flex container justify-between mx-auto p-10">
+    <div class="flex container justify-between mx-auto p-10 md:py-10 md:px-0">
         <!-- Logo -->
         <router-link to="/">
             <span class="text-3xl font-riot font-bold">Ji<span class="font-riot text-yellow-500">Bonge</span></span>

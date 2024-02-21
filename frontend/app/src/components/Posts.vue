@@ -10,7 +10,9 @@
             <div class="flex flex-col">
                 <div class="flex flex-col">
                     <h3 class="text-3xl font-bold">{{ blog.title }}</h3>
-                    <h4 v-for="tag in blog.tags" :key="tag" class="text-yellow-300 flex font-semibold  text-xl">{{ tag.name }}</h4>
+                    <div class="inline-block">
+                        <h4 v-for="tag in blog.tags" :key="tag" class="text-yellow-300 flex font-semibold  text-lg">{{ tag.name.toUpperCase() }}</h4>
+                    </div>
                 </div>
                 
             </div>
