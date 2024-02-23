@@ -1,0 +1,36 @@
+<template>
+  <div class="container mx-auto p-10 md:py-10 md:px-0">
+    <div>
+        <router-link v-for="tag in tags" class="py-3 px-8 m-4 border rounded-sm" key="tag.name" to="">
+            {{ tag.name }}
+        </router-link>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from 'axios'
+
+export default {
+    data() {
+        return {
+            tags: []
+        }
+    },
+    mounted() {
+        this.fetchTags()
+    },
+    methods: {
+        async fetchTags() {
+            const response = await axios.get('http://127.0.0.1:8000/api/v1/tags/')
+            this.tags = response.data
+        }
+    },
+
+    
+}
+</script>
+
+<style>
+
+</style>

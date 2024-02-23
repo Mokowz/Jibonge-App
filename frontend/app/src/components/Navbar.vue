@@ -9,8 +9,8 @@
         <!-- Menu -->
         <div class="hidden md:flex space-x-8">
             <router-link class="" to="/blogs">Blogs</router-link>
-            <router-link class="" to="/about">Tags</router-link>
-            <router-link class="" to="/about">Profiles</router-link>
+            <router-link class="" to="/tags">Tags</router-link>
+            <router-link class="" to="/home">Profiles</router-link>
 
             <!-- Buttons -->
             <div class="flex space-x-8">
