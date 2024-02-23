@@ -7,6 +7,17 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
     
+class Author(models.Model):
+    first_name = models.CharField(max_length=400)
+    last_name = models.CharField(max_length=400)
+    profile_pic = models.ImageField(upload_to='profile_pics/', blank=True, null=True, default='profile_pics/default_profile.jpeg')
+
+    def full_name(self):
+        return f'{self.first_name} {self.last_name}'
+    
+    def __str__(self):
+        return self.full_name()
+    
 
 class Blog(models.Model):
     # Add the fields
@@ -17,3 +28,5 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+    
+

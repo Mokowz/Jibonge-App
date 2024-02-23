@@ -21,7 +21,9 @@
             <p class="max-w-xl text-darkGrey">{{ blog.content.slice(0,200) }}...</p>
 
             <!-- Read More btn -->
-            <a href="#" class="text-yellow-200 underline">Read More</a>
+            <router-link :to="{name: 'blog', params: {id: blog.id}}" class="text-yellow-200 underline">
+                Read More
+            </router-link>
         </div>
     </div>
   </div>
