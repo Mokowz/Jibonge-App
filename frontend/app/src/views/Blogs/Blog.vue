@@ -6,16 +6,28 @@
         <h3 class="text-4xl font-bold">{{ blog.title }}</h3>
     </div>
     <!-- Content section -->
-    <div class="flex justify-between">
+    <div class="flex justify-between space-x-5">
         <!-- Tags and Author Section -->
-        <div class="flex flex-col">
+        <div class="flex flex-col w-1/5">
             <!-- Author Section -->
-            <div class="flex">
-                <h4>By {{ blog.author }}</h4>
+            <div class="flex flex-col pb-6 border-b">
+                <!-- <h4>By {{ fullName(blog.author) }}</h4> -->
+                <h2>AUTHOR</h2>
+                <h4>By Ronny Kerosi</h4>
             </div>
+            <div class="flex flex-col py-6 border-b">
+                <h2>TAGS</h2>
+                <span v-for="tag in blog.tags" key="tag.name">{{ tag.name }}</span>
+            </div>
+            <div class="flex flex-col py-6 border-b">
+                <button @click="goBack">Back to Blogs</button>
+            </div>
+
         </div>
         <!-- Content -->
-        <p class=" text-darkGrey">{{ blog.content }}</p>
+        <div class="w-4/5">
+            <p class=" text-darkGrey">{{ blog.content }}</p>
+        </div>
 
     </div>
   </div>
@@ -23,7 +35,6 @@
 
 <script>
 import axios from 'axios';
-import { stringify } from 'postcss';
 
 export default {
     props: {
@@ -45,6 +56,14 @@ export default {
             const response = await axios.get(`http://127.0.0.1:8000/api/v1/blogs/${this.$route.params.id}/`)
             this.blog = response.data
             console.log(this.blog)
+        },
+        fullName(value) {
+            const author = `${value.user['first_name']} ${value.user['last_name']}`
+            console.log(`User ${author}`)
+            return author
+        },
+        goBack() {
+            window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
         }
     }
 }

@@ -1,5 +1,14 @@
 from rest_framework import serializers
-from .models import Blog, Tag
+from .models import Blog, Tag, Author
+
+from accounts.serializer import CusomUserSerializer
+
+class AuthorSerializer(serializers.ModelSerializer):
+    user = CusomUserSerializer()
+
+    class Meta:
+        model = Author
+        fields = ['id', 'user', 'profile_pic']
 
 class TagSerializer(serializers.ModelSerializer):
 
@@ -9,7 +18,7 @@ class TagSerializer(serializers.ModelSerializer):
 
 class BlogSerializer(serializers.ModelSerializer):
     tags = TagSerializer(many=True, read_only=True)
-
+    author = AuthorSerializer()
     class Meta:
         model = Blog
-        fields = ['id', 'title', 'tags', 'date_added', 'content']
+        fields = ['id', 'title', 'author', 'tags', 'date_added', 'content']
