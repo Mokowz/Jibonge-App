@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics
+from rest_framework import generics, filters
 
 from .models import Blog, Tag, Author
 from .serializers import BlogSerializer, TagSerializer, AuthorSerializer
@@ -12,6 +12,14 @@ class BlogListView(generics.ListCreateAPIView):
 class BlogInstanceView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
+
+# Search View
+class BlogSearchView(generics.ListAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title', 'content']
+
 
 # Tag View
 class TagListView(generics.ListCreateAPIView):

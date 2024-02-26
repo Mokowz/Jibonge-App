@@ -16,9 +16,23 @@
 
 <script>
 import Posts from '@/components/Posts.vue';
+import axios from 'axios';
 
 export default {
   name: 'HomeView',
-  components: { Posts  }
+  components: { Posts  },
+
+  data() {
+    return {
+      blogs: []
+    }
+  },
+
+  methods: {
+    aync searchBlogs(query) {
+      const response = await axios.get('')
+      this.blogs = response.data
+    }
+  }
 }
 </script>
