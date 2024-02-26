@@ -4,11 +4,11 @@
       <!-- Heading -->
       <div class="flex flex-col space-y-3 border-b border-slate-500 pb-6">
         <h1 class="font-bold text-5xl">All Posts</h1>
-        <input type="search" class=" rounded-md px-4 py-2 max-w-sm bg-darkGrey/15" placeholder="Search blogs">
+        <input type="search" v-model="searchInput" class=" rounded-md px-4 py-2 max-w-sm bg-darkGrey/15" placeholder="Search blogs" @input="searchBlogs">
       </div>
 
       <!-- Posts -->
-      <Posts />
+      <Posts :search="searchInput" />
 
 
     </div>
@@ -24,14 +24,16 @@ export default {
 
   data() {
     return {
-      blogs: []
+      searchInput: '',
+      searchResults: [],
     }
   },
 
   methods: {
-    aync searchBlogs(query) {
-      const response = await axios.get('')
-      this.blogs = response.data
+      searchBlogs() {
+      // const response = await axios.get(`http://127.0.0.1:8000/api/v1/blogs/search/?search=${query}`)
+      // this.search = query
+      console.log(`Search Input ${this.searchInput}`)
     }
   }
 }

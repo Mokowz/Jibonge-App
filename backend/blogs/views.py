@@ -8,6 +8,8 @@ from .serializers import BlogSerializer, TagSerializer, AuthorSerializer
 class BlogListView(generics.ListCreateAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title', 'content']
 
 class BlogInstanceView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Blog.objects.all()
