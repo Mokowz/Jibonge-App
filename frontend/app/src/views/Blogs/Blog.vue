@@ -12,20 +12,22 @@
             <!-- Author Section -->
             <div class="flex flex-col pb-6 border-b">
                 <!-- <h4>By {{ fullName(blog.author) }}</h4> -->
-                <h2>AUTHOR</h2>
+                <h2 class="text-lg font-bold text-yellow-300">AUTHOR</h2>
                 <h4>By Ronny Kerosi</h4>
             </div>
             <div class="flex flex-col py-6 border-b">
-                <h2>TAGS</h2>
-                <span v-for="tag in blog.tags" key="tag.name">{{ tag.name }}</span>
+                <h2 class="text-lg font-bold text-yellow-300">TAGS</h2>
+                <div class="flex flex-row space-x-2">
+                    <span v-for="tag in blog.tags" key="tag.name" class="font-semibold uppercase">{{ tag.name }}</span>
+                </div>
             </div>
             <div class="flex flex-col py-6 border-b">
-                <button @click="goBack">Back to Blogs</button>
+                <button @click="goBack" class="text-md font-bold text-yellow-300">&#60; Back to Blogs</button>
             </div>
 
         </div>
         <!-- Content -->
-        <div class="w-4/5">
+        <div class="w-4/5 p-10">
             <p class=" text-darkGrey">{{ blog.content }}</p>
         </div>
 

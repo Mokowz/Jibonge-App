@@ -10,8 +10,8 @@
             <div class="flex flex-col">
                 <div class="flex flex-col">
                     <h3 class="text-3xl font-bold">{{ blog.title }}</h3>
-                    <div class="inline-block">
-                        <h4 v-for="tag in blog.tags" :key="tag" class="text-yellow-300 flex font-semibold  text-lg">{{ tag.name.toUpperCase() }}</h4>
+                    <div class="flex flex-row space-x-2">
+                        <h4 v-for="tag in blog.tags" :key="tag" class="text-yellow-300  font-semibold  text-lg">{{ tag.name.toUpperCase() }}</h4>
                     </div>
                 </div>
                 
@@ -21,8 +21,8 @@
             <p class="max-w-xl text-darkGrey">{{ blog.content.slice(0,200) }}...</p>
 
             <!-- Read More btn -->
-            <router-link :to="{name: 'blog', params: {id: blog.id}}" class="text-yellow-200 underline">
-                Read More
+            <router-link :to="{name: 'blog', params: {id: blog.id}}" class="text-yellow-300 ">
+                Read More &#62;
             </router-link>
         </div>
     </div>
