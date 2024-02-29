@@ -53,11 +53,8 @@ export default {
     methods: {
         async fetchBlogs() {
             // Fetch the blogs
-            console.log(` Search: ${this.search}`)
             const response = await axios.get(`http://127.0.0.1:8000/api/v1/blogs/?search=${this.search}`)
             this.blogs = response.data
-            // console.log(`Search: ${search}`)
-            console.log(`New Search: ${this.search}`)
         },
 
         formatDate(value) {

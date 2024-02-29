@@ -10,15 +10,15 @@
         <div class="hidden md:flex space-x-8">
             <router-link class="" to="/blogs">Blogs</router-link>
             <router-link class="" to="/tags">Tags</router-link>
-            <router-link class="" to="/home">Profiles</router-link>
+            <router-link class="" to="/">Profiles</router-link>
 
             <!-- Buttons -->
-            <div class="flex space-x-8" v-if="loggedInStatus">
+            <div class="flex space-x-8" v-if="loggedInStatus()">
                 <router-link to="/">My Account</router-link>
                 <router-link to="/login" @click="logOut">Log Out</router-link>
             </div>
 
-            <div class="flex space-x-8" v-if="!loggedInStatus">
+            <div class="flex space-x-8" v-else>
                 <router-link to="/signup">Sign Up</router-link>
                 <router-link to="/login">Log In</router-link>
             </div>
@@ -43,7 +43,6 @@ export default {
 
   methods: {
     loggedInStatus() {
-      // this.logInStatus = this.$store.state.loggedIn
       return this.$store.state.loggedIn
     },
 
@@ -51,16 +50,13 @@ export default {
       const response = await axios.post('http://127.0.0.1:8000/api/v1/accounts/logout/')
 
       if (response.status === 200) {
-        // this.changeLogInStatus()
         this.$store.commit('setLoggedIn', false)
         this.loggedInStatus()
-        console.log(`Logged In? ${this.$store.state.loggedIn}`)
       }
     },
 
     changeLogInStatus() {
       this.$store.commit('setLoggedIn', false)
-      // this.loggedInStatus()
     }
 
   }

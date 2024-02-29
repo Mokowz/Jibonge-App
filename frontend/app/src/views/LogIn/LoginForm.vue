@@ -40,7 +40,6 @@ export default {
       })
       if (response.status === 200) {
         this.changeLogin()
-        console.log(`Logged In: ${this.$store.state.loggedIn}`)
         this.loggedIn = true
         this.$router.push('/')
       }

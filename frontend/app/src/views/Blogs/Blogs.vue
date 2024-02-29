@@ -32,9 +32,6 @@ export default {
 
   methods: {
       searchBlogs() {
-      // const response = await axios.get(`http://127.0.0.1:8000/api/v1/blogs/search/?search=${query}`)
-      // this.search = query
-      console.log(`Search Input ${this.searchInput}`)
       this.searchValue = this.searchInput
     }
   }
