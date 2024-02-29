@@ -11,7 +11,7 @@
       </div>
 
       <!-- Posts -->
-      <Posts />
+      <Posts search="" />
 
       <!-- All posts btn -->
       <router-link to="/blogs" class="text-blue-500/60 p-5 float-right">All Posts</router-link>
