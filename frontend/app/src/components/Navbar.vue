@@ -13,10 +13,17 @@
             <router-link class="" to="/home">Profiles</router-link>
 
             <!-- Buttons -->
-            <div class="flex space-x-8">
+            <div class="flex space-x-8" v-if="loggedInStatus">
+                <router-link to="/">My Account</router-link>
+                <router-link to="/login" @click="logOut">Log Out</router-link>
+            </div>
+
+            <div class="flex space-x-8" v-if="!loggedInStatus">
                 <router-link to="/signup">Sign Up</router-link>
                 <router-link to="/login">Log In</router-link>
             </div>
+          
+
         </div>
         
     </div>
@@ -25,8 +32,38 @@
 </template>
 
 <script>
-export default {
+import axios from 'axios';
 
+export default {
+  data() {
+    return {
+      logInStatus: false,
+    }
+  },
+
+  methods: {
+    loggedInStatus() {
+      // this.logInStatus = this.$store.state.loggedIn
+      return this.$store.state.loggedIn
+    },
+
+    async logOut() {
+      const response = await axios.post('http://127.0.0.1:8000/api/v1/accounts/logout/')
+
+      if (response.status === 200) {
+        // this.changeLogInStatus()
+        this.$store.commit('setLoggedIn', false)
+        this.loggedInStatus()
+        console.log(`Logged In? ${this.$store.state.loggedIn}`)
+      }
+    },
+
+    changeLogInStatus() {
+      this.$store.commit('setLoggedIn', false)
+      // this.loggedInStatus()
+    }
+
+  }
 }
 </script>
 
