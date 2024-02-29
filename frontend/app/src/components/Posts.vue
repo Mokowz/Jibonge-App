@@ -44,6 +44,12 @@ export default {
         this.fetchBlogs()
     },
 
+    watch: {
+        search(newValue, oldValue) {
+            this.fetchBlogs()
+        }
+    },
+
     methods: {
         async fetchBlogs() {
             // Fetch the blogs
