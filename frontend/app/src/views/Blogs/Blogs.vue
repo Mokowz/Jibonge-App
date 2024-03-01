@@ -1,11 +1,25 @@
 <template>
     <!-- Flex Container -->
-    <div class="flex flex-col text-white container mx-auto p-10">
-      <!-- Heading -->
-      <div class="flex flex-col space-y-3 border-b border-slate-500 pb-6">
-        <h1 class="font-bold text-5xl">All Posts</h1>
-        <input type="search" v-model="searchInput" class=" rounded-md px-4 py-2 max-w-sm bg-darkGrey/15" placeholder="Search blogs" @input="searchBlogs">
+    <div class="flex flex-col text-white container mx-auto p-10 md:py-10 md:px-0">
+      <!-- Heading and Add Button -->
+      <div class="flex justify-between items-center w-full border-b border-slate-500 pb-6">
+        <!-- Heading -->
+        <div class="flex flex-col space-y-3">
+          <h1 class="font-bold text-5xl">All Posts</h1>
+          <input type="search" v-model="searchInput" class=" rounded-md px-4 py-2 max-w-sm bg-darkGrey/15" placeholder="Search blogs" @input="searchBlogs">
+        </div>
+
+        <!-- Add Blog -->
+        <div v-if="loggedIn()">
+          <router-link to="/new/blog" class="rounded-md px-4 py-2 bg-yellow-500/75 font-medium ">Add New Blog</router-link>
+        </div>
+
+        <!-- <div v-if="loggedIn()">
+          <button>Add New Blog</button>
+        </div> -->
+
       </div>
+      
 
       <!-- Posts -->
       <Posts :search="searchValue" />
@@ -33,6 +47,10 @@ export default {
   methods: {
       searchBlogs() {
       this.searchValue = this.searchInput
+    },
+
+    loggedIn() {
+      return this.$store.state.loggedIn
     }
   }
 }
