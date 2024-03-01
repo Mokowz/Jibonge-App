@@ -6,13 +6,22 @@ from .forms import CustomUserCreationForm, CustomUserChangeForm
 from .models import CustomUser
 
 class CustomUserAdmin(UserAdmin):
+    model = CustomUser
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
     list_display = ('first_name', 'last_name', 'email', 'is_staff')
-    # list_filter = ('is_staff', 'is_superuser', 'is_active')
-    # search_fields = ('first_name', 'last_name', 'email')
     ordering = ('first_name', 'last_name', 'email')
-    # filter_horizontal = ()
+    fieldsets = (
+        (None, {'fields': ('email', 'password')}),
+        ('Personal info', {'fields': ('first_name', 'last_name')}),
+        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
+        ('Important dates', {'fields': ('last_login', 'date_joined')}),
+    )
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('first_name', 'last_name', 'email', 'password1', 'password2', 'is_staff', 'is_superuser'),
+        }),
+    )
 
 admin.site.register(CustomUser, CustomUserAdmin)
-# admin.site.unregister(Group)
