@@ -39,6 +39,9 @@ export default {
         password:this.password,
       })
       if (response.status === 200) {
+        const token = response.data.key
+        localStorage.setItem('token', token)
+        
         this.changeLogin()
         this.loggedIn = true
         this.$router.push('/')

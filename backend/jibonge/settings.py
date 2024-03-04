@@ -41,11 +41,7 @@ INSTALLED_APPS = [
     'dj_rest_auth',
     'corsheaders',
     'drf_yasg',
-    # 'django.contrib.sites',
-    # 'allauth',
-    # 'allauth.account',
-    # 'allauth.socialaccount',
-    # 'dj_rest_auth.registration',
+    'django_filters',
 ]
 
 SITE_ID = 1
@@ -150,3 +146,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+}
