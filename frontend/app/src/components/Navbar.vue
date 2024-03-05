@@ -10,7 +10,7 @@
         <div class="hidden md:flex space-x-8">
             <router-link class="" to="/blogs">Blogs</router-link>
             <router-link class="" to="/tags">Tags</router-link>
-            <router-link class="" to="/">Authors</router-link>
+            <router-link class="" to="/authors">Authors</router-link>
 
             <!-- Buttons -->
             <div class="flex space-x-8" v-if="loggedInStatus()">
