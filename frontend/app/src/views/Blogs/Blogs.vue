@@ -14,9 +14,6 @@
           <router-link to="/new/blog" class="rounded-md px-4 py-2 bg-yellow-500/75 font-medium ">Add New Blog</router-link>
         </div>
 
-        <!-- <div v-if="loggedIn()">
-          <button>Add New Blog</button>
-        </div> -->
 
       </div>
       

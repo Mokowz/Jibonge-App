@@ -21,8 +21,9 @@ class BlogInstanceView(generics.RetrieveUpdateDestroyAPIView):
 class BlogSearchView(generics.ListAPIView):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
-    filter_backends = [filters.SearchFilter]
+    filter_backends = [filters.SearchFilter, DjangoFilterBackend]
     search_fields = ['title', 'content']
+    filterset_fields = ['tags']
 
 # Filter View
 class BlogFilterView(generics.ListCreateAPIView):

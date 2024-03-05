@@ -33,6 +33,11 @@ const routes = [
     component: () => import('../views/Tags/Tags.vue')
   },
   {
+    path: '/tag/:id',
+    name: 'tagsList',
+    component: () => import('../views/Tags/TagBlogs.vue')
+  },
+  {
     path: '/new/blog',
     name: 'newBlog',
     component: () => import('../views/Blogs/NewBlog.vue')
