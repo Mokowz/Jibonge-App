@@ -42,6 +42,11 @@ const routes = [
     name: 'newBlog',
     component: () => import('../views/Blogs/NewBlog.vue')
   },
+  {
+    path: '/authors',
+    name: 'authors',
+    component: () => import('../views/Authors/Authors.vue')
+  },
 ]
 
 const router = createRouter({
