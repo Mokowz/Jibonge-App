@@ -1,6 +1,6 @@
 <template>
   <!-- Flex Container -->
-  <div class="flex container  justify-center mx-auto  p-10">
+  <div class="flex container  justify-center mx-auto  px-8 md:py-10 md:px-10">
     <!-- The Form Card Container -->
     <div class="flex flex-col space-y-6 items-center text-center rounded-lg border px-20 py-10 border-slate-200">
         <!-- Heading -->

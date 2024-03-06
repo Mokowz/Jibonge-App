@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto p-10 md:py-10 md:px-0">
+  <div class="container mx-auto px-8 md:py-10 md:px-10">
     <div class="flex">
         <div v-for="tag in tags" key="tag.id"  class="py-3 px-8 m-4 border rounded-sm">
             <router-link   :to="{name: 'tagsList', params: {id: tag.id}}">

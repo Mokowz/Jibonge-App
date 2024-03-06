@@ -2,7 +2,7 @@
   <div>
     <form action="" @submit.prevent="login" class="w-full mx-auto  flex flex-col space-y-4">
       <!-- Inputs -->
-      <div class="flex flex-col items-center   space-y-3">
+      <div class="flex flex-col items-center  space-y-3">
           <input type="email" placeholder="Email" v-model="email" required  class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
           <input type="password" placeholder="Password" v-model="password" required class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
       </div>

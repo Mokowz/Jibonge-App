@@ -12,7 +12,6 @@
     <!-- Button -->
     <div class="flex flex-col space-y-2">
         <button type="submit" class="px-3 py-2 rounded-sm bg-yellow-500/75 hover:bg-yellow-500/90">Sign Up</button>
-        <input type="button" @click="checkModels()" class="px-3 py-2 rounded-sm bg-yellow-500/75 hover:bg-yellow-500/90">Check
         <span>Already have an account? <router-link to="/login" class="text-yellow-400">Log In</router-link></span>
     </div>
 
