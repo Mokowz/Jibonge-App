@@ -10,10 +10,7 @@
         <div class="flex flex-col space-y-3">
           <label for="" class="font-semibold text-2xl">Add Tags</label>
           <select class="bg-darkGrey/10 rounded-md px-8 py-3" >
-            <div v-for="tag in tags" key="tag.name">
-              <option value="" >{{ tag.name }}</option>
-            </div>
-            
+            <option value=""  v-for="tag in tags" key="tag.name">{{ tag.name }}</option>
           </select>
         </div>
         
