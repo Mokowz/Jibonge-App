@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from accounts.email_notifications import send_email_new_user_created
 from accounts.models import CustomUser
 
 
@@ -11,6 +12,6 @@ def send_email_new_user(sender, created, instance, **kwargs):
     """
     if created:
         print(f"{instance.first_name} was created successfully")
-        instance.save()
-
+        send_email_new_user_created(instance=instance)
+        
     return instance
