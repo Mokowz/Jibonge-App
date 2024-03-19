@@ -1,12 +1,12 @@
 <template>
   <form action="" @submit.prevent="signUp" class="w-full mx-auto  flex flex-col space-y-4">
     <!-- Inputs -->
-    <div class="flex flex-col items-center   space-y-3">
-        <input type="text" placeholder="First Name" v-model="first_name" class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
-        <input type="text" placeholder="Last Name" v-model="last_name" class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
-        <input type="email" placeholder="Email" v-model="email" class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
-        <input type="password" placeholder="Password" v-model="password1" class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
-        <input type="password" placeholder="Confirm Password" v-model="password2" class="p-2 w-full mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
+    <div class="flex w-full flex-col items-center p-0 m- m-0  space-y-4">
+        <input type="text" placeholder="First Name" v-model="first_name" class="p-3 w-full  mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
+        <input type="text" placeholder="Last Name" v-model="last_name" class="p-3 w-full  mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
+        <input type="email" placeholder="Email" v-model="email" class="p-3 w-full  mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
+        <input type="password" placeholder="Password" v-model="password1" class="p-3 w-full  mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
+        <input type="password" placeholder="Confirm Password" v-model="password2" class="p-3 w-full  mx-auto  text-slate-50  rounded-md bg-darkGrey/15 ">
     </div>
     
     <!-- Button -->
@@ -16,7 +16,7 @@
     </div>
 
     <!-- Sign Up with Google -->
-    <a href="#" class="py-3 border border-gradient-to-r border-purple-500 border-pink-500 hover:border-pink-950">Sign up with Google</a>
+    <!-- <a href="#" class="py-3 border border-gradient-to-r border-purple-500 border-pink-500 hover:border-pink-950">Sign up with Google</a> -->
   </form>
 </template>
 
@@ -61,5 +61,10 @@ export default {
 </script>
 
 <style>
+
+.input-field {
+  padding: 0.75rem; /* Adjust as needed */
+  margin: 0.5rem 0; /* Adjust as needed */
+}
 
 </style>
