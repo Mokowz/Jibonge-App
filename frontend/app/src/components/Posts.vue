@@ -53,7 +53,7 @@ export default {
     methods: {
         async fetchBlogs() {
             // Fetch the blogs
-            const response = await axios.get(`http://127.0.0.1:8000/api/v1/blogs/?search=${this.search}`)
+            const response = await axios.get(`https://jibonge-app.onrender.com/api/v1/blogs/?search=${this.search}`)
             this.blogs = response.data
         },
 

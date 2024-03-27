@@ -47,7 +47,7 @@ export default {
     },
 
     async logOut() {
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/accounts/logout/')
+      const response = await axios.post('https://jibonge-app.onrender.com/api/v1/accounts/logout/')
 
       if (response.status === 200) {
         this.$store.commit('setLoggedIn', false)

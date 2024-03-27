@@ -34,7 +34,7 @@ export default {
 
   methods: {
     async login() {
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/accounts/login/', {
+      const response = await axios.post('https://jibonge-app.onrender.com/api/v1/accounts/login/', {
         email: this.email,
         password:this.password,
       })

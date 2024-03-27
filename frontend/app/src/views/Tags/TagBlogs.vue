@@ -67,7 +67,7 @@ export default {
 
     methods: { 
         async fetchTagBlog() {
-            const response = await axios.get(`http://127.0.0.1:8000/api/v1/blogs/filter/?tags=${this.$route.params.id}`)
+            const response = await axios.get(`https://jibonge-app.onrender.com/api/v1/blogs/filter/?tags=${this.$route.params.id}`)
 
             if (response.status == 200) {
                 this.blogs = response.data

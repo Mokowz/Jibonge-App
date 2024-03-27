@@ -55,7 +55,7 @@ export default {
     },
     methods: {
         async fetchSingleBlog() {
-            const response = await axios.get(`http://127.0.0.1:8000/api/v1/blogs/${this.$route.params.id}/`)
+            const response = await axios.get(`https://jibonge-app.onrender.com/api/v1/blogs/${this.$route.params.id}/`)
             this.blog = response.data
             console.log(this.blog)
         },

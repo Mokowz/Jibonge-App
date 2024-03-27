@@ -36,7 +36,7 @@ export default {
 
   methods: {
     async signUp() {
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/accounts/registration/', {
+      const response = await axios.post('https://jibonge-app.onrender.com/api/v1/accounts/registration/', {
           email: this.email,
           first_name: this.first_name,
           last_name: this.last_name,

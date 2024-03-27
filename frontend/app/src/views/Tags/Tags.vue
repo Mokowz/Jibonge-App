@@ -25,7 +25,7 @@ export default {
     },
     methods: {
         async fetchTags() {
-            const response = await axios.get('http://127.0.0.1:8000/api/v1/tags/')
+            const response = await axios.get('https://jibonge-app.onrender.com/api/v1/tags/')
             this.tags = response.data
         },
 
