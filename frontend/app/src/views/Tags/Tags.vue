@@ -20,7 +20,7 @@ export default {
             tags: []
         }
     },
-    mounted() {
+    created() {
         this.fetchTags()
     },
     methods: {
