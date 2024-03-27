@@ -48,7 +48,7 @@ export default {
 
   methods: {
     async postNewBlog() {
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/blogs/', {
+      const response = await axios.post('https://jibonge-app.onrender.com/api/v1/blogs/', {
         title: this.title,
         content: this.content,
         tags: this.added_tags,
