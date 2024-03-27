@@ -5,7 +5,7 @@
         <span class="text-darkGrey w-1/4">{{ formatDate(blog.date_added) }}</span>
 
         <!-- Info -->
-        <div class="flex flex-col w-3/4 space-y-6 mb-4 md:mb-0">
+        <div class="flex flex-col w-full md:w-3/4 space-y-6 mb-4 md:mb-0">
             <!-- Heading -->
             <div class="flex flex-col">
                 <div class="flex flex-col">
