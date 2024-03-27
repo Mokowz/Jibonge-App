@@ -18,7 +18,7 @@ class TagSerializer(serializers.ModelSerializer):
 
 class BlogSerializer(serializers.ModelSerializer):
     tags = TagSerializer(many=True, read_only=True)
-    # author = AuthorSerializer()
+    author = AuthorSerializer(read_only=True)
     class Meta:
         model = Blog
         fields = ['id', 'title', 'author', 'tags', 'date_added', 'content']
