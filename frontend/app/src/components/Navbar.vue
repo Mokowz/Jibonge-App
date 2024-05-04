@@ -45,7 +45,7 @@ export default {
   data() {
     return {
       logInStatus: false,
-      open: true,
+      open: false,
     }
   },
 
