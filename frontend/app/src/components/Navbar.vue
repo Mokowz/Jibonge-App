@@ -13,21 +13,21 @@
         </span>
 
         <!-- Menu -->
-        <div class="md:flex items-center md:static absolute md:pb-10 pb-10 md:px-0 px-20 h-full md:h-auto  md:bg-inherit md:w-auto w-full top-20 duration-700 ease-in  md:space-x-8"
+        <div class="md:flex text-xl md:text-base md:font-normal  md:static absolute md:pb-10 pb-10 md:px-0 px-20 h-full md:h-auto  md:bg-inherit md:w-auto w-full top-20 duration-700 ease-in  md:space-x-8"
         :class="[open ? 'left-0' : 'left-[-100%]']" @click="menuBtn()">
-            <router-link class="block md:flex my-6 md:my-0" to="/blogs">Blogs</router-link>
-            <router-link class="block md:flex  my-6 md:my-0" to="/tags">Tags</router-link>
-            <router-link class="block md:flex  my-6 md:my-0" to="/authors">Authors</router-link>
+            <router-link class="block md:flex my-10 md:my-0" to="/blogs">Blogs</router-link>
+            <router-link class="block md:flex  my-10 md:my-0" to="/tags">Tags</router-link>
+            <router-link class="block md:flex  my-10 md:my-0" to="/authors">Authors</router-link>
 
             <!-- Buttons -->
             <div class="md:flex block md:space-x-8" v-if="loggedInStatus()">
-                <router-link class="block my-6" to="/">My Account</router-link>
-                <router-link class="block my-6" to="/login" @click="logOut">Log Out</router-link>
+                <router-link class="block my-10  md:my-0" to="/">My Account</router-link>
+                <router-link class="block my-10  md:my-0" to="/login" @click="logOut">Log Out</router-link>
             </div>
 
             <div class="md:flex block space-x-0 md:space-x-8" v-else>
-                <router-link class="block my-6" to="/signup">Sign Up</router-link>
-                <router-link class="block my-6" to="/login">Log In</router-link>
+                <router-link class="block my-10  md:my-0" to="/signup">Sign Up</router-link>
+                <router-link class="block my-10  md:my-0" to="/login">Log In</router-link>
             </div>
           
 
